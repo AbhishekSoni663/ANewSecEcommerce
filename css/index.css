@@ -8,6 +8,25 @@
 body {
   font-family: var(--Jost-sans-serif) !important;
 }
+.carousel-indicators [data-bs-target] {
+  box-sizing: content-box;
+  flex: 0 1 auto;
+  width: 10px !important;
+  height: 10px !important;
+  padding: 0;
+  margin-right: 3px;
+  margin-left: 3px;
+  text-indent: -999px;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  opacity: .5;
+  transition: opacity .6s ease;
+}
 .modal-footer.whishmodal button {
   background: #ee403d;
 }
@@ -157,8 +176,17 @@ opacity: 0.6;
   background-position: center;
   
 }
-
-
+img.category_img{
+  min-height: 230px;
+  object-fit: cover;
+  width: auto;
+}
+img.over{
+  min-height: 748px;
+  object-fit: cover;
+  height: 100%;
+  width: auto;
+}
 .product-icons{
  overflow: hidden;
   padding: 0px;
@@ -231,6 +259,48 @@ opacity: 0.6;
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+  /* .seventh-head h1{
+    font-size: var(--font-22) !important;
+  } */
+  .s-p2{
+    font-size: var(--font-17) !important;
+  }
+  /* .sixth-box-head h1{
+    font-size: var(--font-22) !important;
+  } */
+  .sixth-trend-head h6{
+    font-size: var(--font-16) !important;
+  }
+  .fcolr{
+    font-size: var(--font-15) !important;
+  }
+  .fcolr-a{
+    font-size: var(--font-14) !important;
+  }
+  .ft-icons i{
+    font-size: var(--font-15);
+  }
+  .ft-copy p{
+    font-size: var(--font-14) !important;
+  }
+  .ft-copy-select p{
+font-size: var(--font-14) !important;
+  }
+  .ft-copy-select select{
+    font-size: var(--font-14) !important;
+      }
+  .seventh-text p{
+    font-size: var(--font-14) !important;
+  }
+  .seventh-text h5{
+    font-size: var(--font-18);
+  }
+  .s-a1{
+    font-size: var(--font-11) !important;
+  }
+  .s-a2{
+    font-size: var(--font-10);
+  }
 }
 .th-h-icon{
     position: absolute;
@@ -272,7 +342,47 @@ opacity: 0.6;
 /* .fa-star{
   color: var(--color-yellow);
 } */
+@media(max-width:350px){
+  .product-head , .product-head1 , .product-head2 , .product-head3{
+    height: 190px !important;
+  }
+}
+@media(max-width:450px){
+  .product-head , .product-head1 , .product-head2 , .product-head3{
+    height: 320px ;
+  }
+}
+@media(max-width:575px){
+  .product-head , .product-head1 , .product-head2 , .product-head3{
+    height: 300px ;
+  }
+  h5.product-box {
+    background: #ffffff;
+    height: 17px !important;
+    margin: 5px  !important;
+    display: flex ;
+    padding: 0 6px !important;
+    width: 30px !important;
+    font-family: Jost, sans-serif;
+    font-size: 10px !important;
+    align-items: center;
+}
+.product-detail h5{
+  font-size: var(--font-13) !important;
+}
+.product-detail p{
+  font-size: var(--font-13) !important;
+}
+.pr-i1 i{
+  padding: 6px 6px !important;
+  font-size: var(--font-10) !important;
+}
+.pr-i1 i svg{
+  width: 10px !important;
+  height: 10px !important;
+}
 
+}
 .page-bar{
   width:66px;
   height:4px;
@@ -281,11 +391,13 @@ opacity: 0.6;
 .pagination{
   padding-top: 1px;
 }
-.page-bar.active{
-  background-color: var(--bar-bg-color);
+.page-bar.active , .page-bar1.active , .page-bar2.active , .page-bar3.active{
+  background-color: var(--background-thirtyeight);
 }
-.product-box1 , .product-box2{
-  width: 25%;
+.product-box1,
+.product-box2 {
+  width: 25% !important;
+  display: inline-block !important;
 }
 /*  */
 /* Product font styles */
@@ -401,6 +513,7 @@ li {
   background: url(../images/smartphon.avif) , url('https://media.genics.in/common/image-place-holder.webp');
   width: 100%;
   height: 700px;
+  max-height: 700px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -408,6 +521,7 @@ li {
 .phone_img2 {
   background: url(../images/smartphon.avif), url(https://media.genics.in/common/image-place-holder.webp);
   height: 700px;
+  max-height: 700px;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -416,6 +530,7 @@ li {
   background: url(../images/smartphon.avif), url('https://media.genics.in/common/image-place-holder.webp');
   width: 100%;
   height: 700px;
+  max-height: 700px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -535,14 +650,34 @@ li {
   -webkit-transition-delay: 0.32s;
   transition-delay: 0.32s;
 }
-
+/* .super-box-2{
+ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} */
 .super-box:hover .text {
   opacity: 0;
   -webkit-transform: translateY(-4px) scale(.8);
           transform: translateY(-4px) scale(.8);
   
 }
-
+@media(max-width:768px){
+  .sup-box2-p p{
+font-size: var(--font-12);
+  }
+}
+.sp-img1{
+  width: 50px;
+  background-color: #e5f3ff59;
+  box-shadow: rgba(80, 60, 60, 0.1) 0px 4px 12px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sp-img1 img{
+  mix-blend-mode: normal;
+  /* filter: contrast(10%); */
+}
 .box::after {
   content:"Discover the attacker's tactics and purposes and find out the identity of the attacker";
   position: absolute;
@@ -683,6 +818,48 @@ p.get_tex {
 .later_imag {
   height: 430px !important;
   object-fit: cover !important;
+}
+.display h5{
+  font-size: var(--font-10) !important;
+}
+.display h2{
+  font-size: var(--font-10) !important;
+}
+.Viewmore{
+  padding: 5px 10px !important;
+  font-size: 12px;
+}
+.display {
+  opacity: 1;
+  top: 13px !important;
+  left: 15px;
+}
+.displaylast{
+  bottom: 50px !important;
+  opacity: 1;
+}
+.displaylast h5{
+  font-size: var(--font-10) !important;
+}
+.displaylast h2{
+  font-size: var(--font-10) !important;
+}
+.third-cat-a img{
+  width: 22px;
+}
+.third-open-menu{
+  width: 22px !important;
+}
+.head2-a{
+  font-size: var(--font-16) !important;
+}
+.first-navbar-start{
+padding-top: 5px !important;
+padding-bottom: 5px !important;
+}
+.third-navbar-start{
+  padding-top: 0px !important;
+  padding-bottom: 5px !important;
 }
 }
 @media (max-width: 505px) {
@@ -1029,33 +1206,40 @@ p.boldtext {
   opacity: 0.7;
 }
 .pen {
+  /* background-image: url(../images/gal1.webp) , url('https://media.genics.in/common/image-place-holder.webp'); */
+  width: 100%;
+  min-height: 450px;
+  background-size: cover;
+}
+#crystal_img1 {
   background-image: url(../images/gal1.webp) , url('https://media.genics.in/common/image-place-holder.webp');
-  width: 100%;
+  /* width: 100%;
   height: 450px;
-  background-size: cover;
+  background-size: cover; */
 }
-.pen1 {
+#crystal_img2 {
   background-image: url(../images/gal2.webp), url('https://media.genics.in/common/image-place-holder.webp');
-  width: 100%;
+  /* width: 100%;
   height: 450px;
-  background-size: cover;
+  background-size: cover; */
 }
-.pen2 {
+#crystal_img3 {
   background-image: url(../images/gal3.webp), url('https://media.genics.in/common/image-place-holder.webp');
-  width: 100%;
+  /* width: 100%;
   height: 450px;
-  background-size: cover;
+  background-size: cover; */
 }
-.pen3 {
+#crystal_img4 {
   background-image: url(../images/gal4.webp), url('https://media.genics.in/common/image-place-holder.webp');
-  width: 100%;
+  /* width: 100%;
   height: 450px;
-  background-size: cover;
+  background-size: cover; */
 }
 .lastone {
   background-image: url(../images/gal5.webp), url('https://media.genics.in/common/image-place-holder.webp');
   width: 100%;
-  height: 900px;
+  min-height: 900px;
+  /* height: 100%; */
   background-size: cover;
   background-position: center;
 }
@@ -1092,29 +1276,22 @@ p.boldtext {
   padding-left: 0px !important;
 }
 }
-@media screen  and (max-width:575px) {
+/* @media screen  and (max-width:575px) {
   .pen {
   background-image: url(../images/gal1.webp), url('https://media.genics.in/common/image-place-holder.webp');
   width: 100%;
   height: 330px;
   background-size: cover;
 }
+} */
+@media(max-width:575px) {
+  .lastone{
+    min-height: 210px !important;
+    height: 220px !important;
 }
-@media screen  and (max-width:575px) {
-  .lastone {
-  background-image: url(../images/gal5.webp) , url('https://media.genics.in/common/image-place-holder.webp');
-  width: 100%;
-  height: 320px;
-  background-size: cover;
-}
-.pen1{
-  height: 340px;
-}
-.pen2{
-  height: 380px;
-}
-.pen3{
-  height: 340px;
+.pen{
+  height: 70px !important;
+  min-height: 110px !important;
 }
 }
 /* .first:hover {
@@ -1140,7 +1317,44 @@ transition:0.5s;
 /* / phonoo css ------------------------------------------------ / */
 
 /* / Govind Sir css Start / */
-
+@media(max-width:1200px){
+  .lastone {
+    min-height: 630px ;
+}
+.pen {
+  min-height: 315px;
+}
+.display {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  color: white;
+  z-index: 2;
+  opacity: 0;
+}
+.displaylast{
+bottom: 110px;
+}
+.display h5{
+  font-size: var(--font-28);
+}
+.display h2{
+  font-size: var(--font-25);
+}
+.displaylast h5{
+  font-size: var(--font-28);
+}
+.displaylast h2{
+  font-size: var(--font-22);
+}
+.Viewmore {
+  background-color: white;
+  color: black;
+  padding: 15px 35px;
+  border-radius: 50px;
+  /* letter-spacing: 3px; */
+}
+}
 .banner-content {
   max-width: 70%;
 }
@@ -1178,7 +1392,18 @@ transition:0.5s;
 .box-card {
   height: 680px;
 }
-
+img.banner_img {
+  max-height: 360px;
+  width: auto;
+  object-fit: cover;
+  height: 100%;
+}
+img.banner_img3 {
+  max-height: 350px;
+  width: auto;
+  object-fit: cover;
+  height: 100%;
+}
 .box-card2 {
   height: 50% !important;
 }
@@ -1256,6 +1481,40 @@ transition:0.5s;
   .box-card {
     height: 256px;
   }
+  img.category_img {
+    min-height: 80px;
+    object-fit: cover;
+    width: auto;
+}
+  .pen {
+    min-height: 170px ;
+}
+.display h5{
+  font-size: var(--font-18);
+}
+.display h2{
+  font-size: var(--font-17);
+}
+.displaylast{
+  left: 15px;
+}
+.displaylast h5{
+  font-size: var(--font-18);
+}
+.displaylast h2{
+  font-size: var(--font-17);
+}
+.lastone {
+  min-height: 340px;
+}
+.display{
+  opacity: 1;
+  top: 20px;
+  left: 15px;
+}
+.Viewmore{
+  padding: 10px 25px;
+}
   .custom-nav {
     display: none;
   }
