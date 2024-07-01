@@ -456,13 +456,16 @@ color: var(--color-two);
 /*  */
 
 /*  */
-li {
+/* li {
   list-style: none;
-}
+} */
 .box_one a {
   font-size: var(--font-17);
   color:var(--color-black);
   /* font-family: sans-serif; */
+}
+.box_one li {
+  list-style: none;
 }
 .box_botm p {
   font-size: var(--font-16);
@@ -1511,6 +1514,10 @@ img.banner_img3 {
   opacity: 1;
   top: 20px;
   left: 15px;
+}
+.displaylast{
+  opacity: 1;
+  display: block;
 }
 .Viewmore{
   padding: 10px 25px;

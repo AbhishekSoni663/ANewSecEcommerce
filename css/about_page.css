@@ -38,6 +38,7 @@ p.elementor_pare {
 .Fashions {
     bottom: 14px;
     z-index: 14;
+    left: 10px;
     position: absolute;
 }
 .clothy_title 
@@ -79,4 +80,7 @@ i.fa-solid.fa-store {
 }
 .aboutfore2 {
     font-weight: var(--font-weight-400);
+}
+.newabout-section{
+    position: relative;
 }

@@ -59,3 +59,12 @@ h1.elementor_heading {
     font-size: var(--font-20);
 }
 }
+@media(max-width:991px){
+    .Fashions{
+        position: unset !important
+    }
+ 
+    /* .newabout-section{
+        position:unset !important;
+    } */
+}
